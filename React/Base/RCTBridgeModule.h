@@ -204,7 +204,7 @@ RCT_CONCAT(initialize_, objc_name)() { RCTRegisterModule([objc_name class]); }
  */
 #define RCT_REMAP_METHOD(js_name, method) \
   _RCT_EXTERN_REMAP_METHOD(js_name, method, NO) \
-  - (void)method;
+  - (void)method RCT_DYNAMIC;
 
 /**
  * Similar to RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD but lets you set
